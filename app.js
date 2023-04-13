@@ -42,16 +42,17 @@ app.get('/SuggestedBlood', function(req, res) {
     console.log(Reqtype);
     res.render('SuggestedBlood');
 });
-app.get('/ShowBloodsTable', function(req, res) {
+app.get('/ShowBloodsTable', async(req, res)=> {
     console.log(Reqtype);
-    res.render('ShowBloodsTable');
+    let b = await types.find({});
+    res.render('ShowBloodsTable',{bloods:b});
 });
 
 app.get('/Success', function(req, res) {
     res.render('Success.html');
 });
 
-/******************************************HOOOOOOOOOOOOOOOOOONNNNNNNNNNNNNNNN************************/
+/******************************************HERE************************/
 app.post("/RaiseBlood", async(req, res) => {
     console.log('Raising blood');
     let bt1 = new bt({
@@ -72,20 +73,6 @@ app.post("/RaiseBlood", async(req, res) => {
             console.log(t);
         }
 });
-
-
-        //const rb1 = await rb.findOne({ a: "1" });
-        //console.log(rb1);
-
-    /*let a;
-    rb.findOne({ a: "1" }).then((rb1) => {
-        a=rb1;
-      }).catch((err) => {
-        console.error(err);
-      });
-      console.log(a);*/
-    //console.log(rb1);
-    //console.log(bt1);
     bt1.save(function(err) {
 
         if (!err) {
@@ -95,74 +82,7 @@ app.post("/RaiseBlood", async(req, res) => {
             return res.redirect('/Home1.html');
         }
 });
-
-
-
-    /*
-
-    let users = new User({
-        FirstName: req.body.FirstName,
-        LastName: req.body.LastName,
-        id: req.body.id,
-        password: req.body.password,
-        email: req.body.email,
-        Gender: req.body.Gender,
-        Age: req.body.Age,
-        Phone: req.body.Phone,
-        Roll: req.body.Roll,
-        Birthdate: req.body.Birthdate
-    })
-
-    console.log(users);
-    console.log(req.body.id);
-    User.findOne({
-        id: req.body.id,
-
-    }, function(err, user) {
-        if (err) {
-
-            res.json({
-                error: err
-            })
-        }
-        console.log(user);
-        if (!user) {
-            if (passwordschema.validate(req.body.password)) {
-                users.save(function(err) {
-                    if (!err) {
-                        console.log("sign up succesfuly");
-                        return res.redirect('/Log-in');
-                    }
-                });
-            } else {
-                //if(user.Roll==='Employee'){
-                console.log("sign up not succesfuly");
-                return res.redirect("/Sign-Up");
-                //}
-            };
-        } else {
-            console.log("the user is already exist!");
-            return res.redirect("/Sign-Up");
-        }
-    });
-});
-// app.post("/product", (req, res) => {
-
-//     let products = new User({
-//         pants:req.body.pants,
-//         coat:req.body.coat,
-//         shirt:req.body.shirt,
-//         shoes:req.body.shoes,
-//         chair:req.body.chair,
-//         table:req.body.table
-//     })
-//     products.save(function(err) {
-//         if (!err) {
-//             console.log("sign up succesfuly");
-//             return res.redirect('/product');
-//         }
-//     });
-//*/ });
+ });
 
 async function checkamount(type1,amount)
 {
@@ -361,6 +281,8 @@ app.post("/SuggestedBlood", async(req, res) => {
             })
     }
 });
+
+app.get('/ShowBloodTables.ejs')
 
 
 

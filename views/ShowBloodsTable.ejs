@@ -45,44 +45,48 @@
   <table>
     <thead>
       <tr>
-        <th>Blood Type</th>
-        <th>Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>A+</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>A-</td>
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>B+</td>
-        <td>75</td>
-      </tr>
-      <tr>
-        <td>B-</td>
-        <td>25</td>
-      </tr>
-      <tr>
-        <td>AB+</td>
-        <td>125</td>
-      </tr>
-      <tr>
-        <td>AB-</td>
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>O+</td>
-        <td>200</td>
-      </tr>
-      <tr>
-        <td>O-</td>
-        <td>10</td>
-      </tr>
-    </tbody>
-  </table>
+        <table id="PatientqueueTable" class="container">
+
+
+          <thead>
+              <tr>
+                  <th>
+                      <h1>Type</h1>
+                  </th>
+                  <th>
+                      <h1>amount</h1>
+                  </th>
+                
+  
+              </tr>
+  
+          </thead>
+  
+          <tbody>
+  
+              <%bloods.forEach(blood=>{ %>
+                 
+                      <tr>
+                          <td>
+                              <p>
+  
+                                  <%= blood.type %>
+                              </p>
+                          </td>
+                          
+                          <td>
+                              <p>
+                                  <%= blood.amount %>
+                              </p>
+                          </td>
+                      
+  
+                      </tr>
+                      
+                          <%})%>
+  
+          </tbody>
+  
+      </table>
 </body>
 </html>
