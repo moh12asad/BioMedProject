@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Log-in.css">
+    <title>Forgot Password</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navlinks">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Sign-Up.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="login-block">
+        <h1>Reset Password</h1>
+        <form action="/ForgotPW" method="POST">
+        <input name="id" type="text" value="" placeholder="ID" id="Id" />
+        <input name="email" type="email" value="" placeholder="Email" id="username" />
+        <input name="newpass" type="password" value="" placeholder="Password" id="passw" />
+        <input name="confnewpass" type="password" value="" placeholder="confirm password" id="passw" />
+        <button type="submit">Reset Password</button>
+    </form>
+    </div>
+    </body>
+    </html>
+    

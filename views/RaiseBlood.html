@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <div id="message"></div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Log-in.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.2.1/js/all.js"></script>
+    <title>Raise blood</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navlinks">
+            <ul>
+                <li><a href="Home1.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="login-block">
+        <h1><i> Donate blood</i></h1>
+        <form action="/RaiseBlood" method="POST">
+            <select name="type" id="id">
+                <option value="A+">A+</option>
+                <option value="O+">O+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="A-">A-</option>
+                <option value="O-">O-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+            </select>
+            <input name="id" type="text" placeholder="ID" maxlength="9" />
+            <input name="FName" type="text" placeholder="Full Name" />
+            <input name="amount" type="number" placeholder="amount" />
+            <input name="date" type="date">
+            <button type="submit">Donate</button>
+
+            <!--<input name="age" type="number"  placeholder="age"/
+     
+    <input name="birthdate" type="date"  placeholder="age"/>
+    !-->
+
+
+        </form>
+    </div>
+</body>
+
+</html>

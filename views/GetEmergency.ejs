@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <div id="message"></div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Log-in.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.2.1/js/all.js"></script>
+    <title>Emergency</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navlinks">
+            <ul>
+                <li><a href="Home1.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="login-block">
+        <h1><i> Get The maximum quantity of O-,there are <%= q.amount %> blood units </i></h1>
+        <form action="/GetEmergency" method="POST">
+            <select name="type" id="id">
+                <option value="O-">O-</option>
+            </select>
+            <input name="amount" type="number" placeholder="amount" />
+            <button type="submit">Get</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

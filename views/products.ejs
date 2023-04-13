@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Employees</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+        
+        th {
+            background-color: rgb(97, 180, 8);
+            color: white;
+        }
+    </style>
+    <link rel="icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Employees.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navlinks">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Profile-Service1">service Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <table id="PatientqueueTable" class="container">
+
+
+        <thead>
+            <tr>
+                <th>
+                    <h1>pants</h1>
+                </th>
+                <th>
+                    <h1>coat</h1>
+                </th>
+                <th>
+                    <h1>shirt</h1>
+                </th>
+                <th>
+                    <h1>shoes</h1>
+                </th>
+                <th>
+                    <h1>chair</h1>
+                </th>
+                <th>
+                    <h1>table</h1>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <%p.forEach(user=>{ %>
+                
+                    <tr>
+                        <td>
+                            <p>
+
+                                <%= user.pants %>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <%= user.coat %>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <%= user.shirt %>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <%= user.shoes%>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <%= user.chair%>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <%= user.table%>
+                            </p>
+                        </td>
+                        
+                    </tr>
+                    
+                        <%})%>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

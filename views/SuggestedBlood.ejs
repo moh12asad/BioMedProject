@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+        
+        th {
+            background-color: rgb(235, 85, 85);
+            color: white;
+        }
+        p{
+            font-style:inherit;
+        }
+    </style>
+    <div id="message"></div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Log-in.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.2.1/js/all.js"></script>
+    <title>Suggested blood types</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navlinks">
+            <ul>
+                <li><a href="Home1.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <table id="PatientqueueTable" class="container">
+
+
+        <thead>
+            <tr>
+                <th>
+                    <h1>Type</h1>
+                </th>
+                <th>
+                    <h1>amount</h1>
+                </th>
+              
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <%bloods.forEach(blood=>{ %>
+               
+                    <tr>
+                        <td>
+                            <p>
+
+                                <%= blood.type %>
+                            </p>
+                        </td>
+                        
+                        <td>
+                            <p>
+                                <%= blood.amount %>
+                            </p>
+                        </td>
+                    
+
+                    </tr>
+                    
+                        <%})%>
+
+        </tbody>
+
+    </table>
+    <div class="login-block">
+        <h1><i> Suggested blood</i></h1>
+        <h3><li>Specify the blood type from the table above, and the amount you want</li></h3>
+            <h3><li>The selected blood type is not available or the requested amount exceeds the available quantity. Please select another blood type or check the suggested blood types and amounts above for available quantities.</li></h4>
+        <form action="/SuggestedBlood" method="POST">
+            <input name="type" type="text" placeholder="type"/>
+            <input name="amount" type="number" placeholder="amount" />
+            <button type="submit">Suggested blood</button>
+        </form>
+    </div>
+</body>
+
+</html>
