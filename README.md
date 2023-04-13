@@ -1,10 +1,7 @@
 # Bank 
-technologies used to develop the website: Javascript, React, Express, MongoDb, NodeJs
+install npm package using 'npm i'
+run the server using the command in vs code terminal 'npm rus start'
+open web application (chrome is good) and type in url 'localhost:3000'
+you should add the ip to clusterof the mongodb, i have an access to cluster, i will add your current ip when you will run my project
 
-to run the project you need to install Nodejs on your machine.
-Firstly We need to Download VS Code to begining the project ,secondly we want to download MongoDb (the data base for the Backend) and the node js & Express 
-and we have to add packages jason after that we want to run the mongodb driver and node js by the terminal on steps we have to type on the terminal 
-npm install -g nodemon , nodemon --inspect (installing nodejs on your machine)...
-the project building with html and css  and javascript that the html for the frontend & css for the design and the javascript to the backend 
-and we have to run the server before visit the website in google on the terminal by "nodemon server.js"
 
